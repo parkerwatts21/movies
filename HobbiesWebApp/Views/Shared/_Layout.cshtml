@@ -1,0 +1,108 @@
+﻿<!--
+=========================================================
+* Soft UI Design System PRO - v1.1.1
+=========================================================
+
+* Product Page:  https://www.creative-tim.com/product/soft-ui-design-system-pro
+* Copyright 2023 Creative Tim (https://www.creative-tim.com)
+* Coded by www.creative-tim.com
+
+ =========================================================
+
+* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/apple-icon.png">
+    <link rel="icon" href="/img/LogoPickleball.png" type="image/x-icon">
+    <!--     Fonts and icons     -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
+    <!-- Nucleo Icons -->
+    <link href="\lib\bootstrap\dist\css\nucleo-icons.css" rel="stylesheet" />
+    <link href="\lib\bootstrap\dist\css\nucleo-svg.css" rel="stylesheet" />
+    <!-- Font Awesome Icons -->
+    <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+    <!-- CSS Files -->
+    <title>PK Pickleball Academy - @ViewData["Title"]</title>
+    <link href="\lib\bootstrap\dist\css\soft-design-system-pro.css" rel="stylesheet" />
+</head>
+<header>
+        <!-- Navbar Light -->
+        <div class="container position-sticky z-index-sticky top-0">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="navbar navbar-expand-lg  blur blur-rounded top-0  z-index-3 shadow position-absolute my-3 py-2 start-0 end-0 mx-4">
+                        <div class="container-fluid px-0">
+                        <a href="/" class="navbar-brand font-weight-bolder ms-sm-3" style="margin-right: 0px;" rel="tooltip" title="Designed and Coded by Creative Tim" data-placement="bottom">
+                                PK Pickleball Academy
+                            </a>
+                            <a href="/home" class="btn btn-sm  bg-gradient-info  btn-round mb-0 ms-auto d-lg-none d-block">CONTACT US</a>
+                            <div class="collapse navbar-collapse w-100 pt-3 pb-2 py-lg-0" id="navigation">
+                                <ul class="navbar-nav navbar-nav-hover mx-auto">
+                                    <li class="nav-item dropdown dropdown-hover mx-2">
+                                        <a href="/home/lessons" role="button" class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center" id="surveyPage">
+                                            Lessons
+                                        </a>
+                                    <li class="nav-item dropdown dropdown-hover mx-2">
+                                        <a href="/home/schedule" role="button" class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center" id="surveyPage">
+                                            Schedule
+                                        </a>
+                                    </li>
+                                </ul>
+                                <ul class="navbar-nav d-lg-block d-none">
+                                    <li class="nav-item">
+                                    <a href="https://www.linkedin.com/in/parker-watts-3419a9227/" class="btn btn-sm  bg-gradient-primary  btn-round mb-0 me-1">CONTACT ME</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+</header>
+    <body>
+    @RenderBody()
+    </body>
+<footer id="footer" class="footer py-4 bg-gradient-dark">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-3 text-start my-auto">
+                <p class="mb-0 text-white text-sm">
+                    Copyright © <script>document.write(new Date().getFullYear())</script> Parker Watts - Section 003
+                </p>
+            </div>
+            <div class="col-lg-5 col-md-8 ms-auto text-end">
+                <ul class="nav flex-row ms-n3 align-items-center mt-4 mt-sm-0">
+                    <li class="nav-item">
+                        <a class="nav-link text-white opacity-8" href="/" >
+                            Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white opacity-8" href="/#footer" >
+                            About
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link text-white opacity-8" href="/home/lessons">
+                            Lessons
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white opacity-8" href="/home/schedule">
+                            Schedule
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+<script src="lib\bootstrap\dist\js\soft-design-system-pro.js"></script>
+@await RenderSectionAsync("Scripts", required: false)
+</html>
