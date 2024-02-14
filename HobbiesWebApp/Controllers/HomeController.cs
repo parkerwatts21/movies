@@ -11,12 +11,12 @@ namespace Mission07_Watts.Controllers
             return View();
         }
 
-        public IActionResult lessons() //View #2 Calculation part of the assignment
+        public IActionResult About() //View #2 Calculation part of the assignment
         {
             return View();
         }
 
-        public IActionResult schedule()
+        public IActionResult Form()
         {
             return View();
         }
