@@ -16,9 +16,16 @@ namespace Mission07_Watts.Controllers
             return View();
         }
 
+        [HttpGet]
         public IActionResult Form()
         {
             return View();
+        }
+
+        [HttpPost]
+        public IActionResult Form(Application response)
+        {
+            return View("Form");
         }
 
 
