@@ -2,182 +2,79 @@
     ViewData["Title"] = "Lessons";
 }
 <!-- START Pricing w/ 2 cards & nav tabs -->
-<section class="py-2 bg-light">
-    <div><br /></div>
-    <div><br /></div>
-    <div class="container pt-5">
-        <div class="row">
-            <div class="col-lg-4 col-md-10 d-flex justify-content-center flex-column">
-                <h3 class="mt-3">Choose your lesson plan</h3>
-                <p class="lead">Our academy has two options to book lessons: group and private lessons. Pick your plan and we can calculate how much money it will cost for lessons.</p>
-                <div class="nav-wrapper me-auto mt-4 mb-5 mb-lg-0">
-                </div>
-            </div>
-            <div class="col-lg-7 col-md-12 ms-lg-auto me-lg-auto">
-                <div class="tab-content tab-space">
-                    <div class="tab-pane active" id="personal">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="card card-pricing bg-white border-0 text-center mb-4">
-                                    <div class="card-header bg-transparent">
-                                        <h6 class="text-uppercase ls-1 py-3 mb-0">Group</h6>
-                                    </div>
-                                    <div class="card-body text-dark">
-                                        <p class="display-2 font-weight-bold mb-0">$25</p>
-                                        <span>per lesson</span>
-                                        <ul class="list-unstyled my-4">
-                                            <li class="align-items-center">
-                                                <b>20%</b> <span>Store Discount</span>
-                                            </li>
-                                            <li class="align-items-center my-2">
-                                                <b>$15</b> <span>Court Reservations/hr</span>
-                                            </li>
-                                            <li class="align-items-center">
-                                                <b>14 Days</b> <span>Advanced Booking</span>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="card-footer bg-transparent">
-                                        <button id="btnGroupCost" class="btn btn-outline-primary">Cost Calculator</button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="card card-pricing bg-gradient-primary border-0 text-center mb-4 overflow-hidden">
-                                    <img src="/img/shapes/waves-white.svg" alt="pattern-lines" class="position-absolute opacity-8">
-                                    <div class="card-header bg-transparent">
-                                        <h6 class="text-uppercase text-white ls-1 py-3 mb-0">Private</h6>
-                                    </div>
-                                    <div class="card-body text-white position-relative">
-                                        <p class="display-2 font-weight-bold mb-0">$60</p>
-                                        <span>per lesson</span>
-                                        <ul class="list-unstyled my-4">
-                                            <li class="align-items-center">
-                                                <b>40%</b> <span>Store Discount</span>
-                                            </li>
-                                            <li class="align-items-center my-2">
-                                                <b>Free</b> <span>Court Reservations</span>
-                                            </li>
-                                            <li class="align-items-center">
-                                                <b>7 Days</b> <span>Advanced Booking</span>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="card-footer bg-transparent position-relative">
-                                        <button id="btnPrivateCost" class="btn btn-outline-white">Cost Calculator</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tab-pane" id="commercial">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="card card-pricing bg-white border-0 text-center mb-4">
-                                    <div class="card-header bg-transparent">
-                                        <h6 class="text-uppercase ls-1 py-3 mb-0">Gold</h6>
-                                    </div>
-                                    <div class="card-body text-dark">
-                                        <p class="display-2 font-weight-bold mb-0">$100</p>
-                                        <span>per month</span>
-                                        <ul class="list-unstyled my-4">
-                                            <li class="align-items-center">
-                                                <b>200GB</b> <span>File Storage</span>
-                                            </li>
-                                            <li class="align-items-center my-2">
-                                                <b>Unlimited</b> <span>Users</span>
-                                            </li>
-                                            <li class="align-items-center">
-                                                <b>Premium</b> <span>Support</span>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="card-footer bg-transparent">
-                                        <button class="btn btn-outline-primary">Request a demo</button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="card card-pricing bg-gradient-primary border-0 text-center mb-4 overflow-hidden">
-                                    <img src="/img/shapes/waves-white.svg" alt="pattern-lines" class="position-absolute opacity-8">
-                                    <div class="card-header bg-transparent">
-                                        <h6 class="text-uppercase text-white ls-1 py-3 mb-0">Platinum</h6>
-                                    </div>
-                                    <div class="card-body text-white position-relative">
-                                        <p class="display-2 font-weight-bold mb-0">$135</p>
-                                        <span>per month</span>
-                                        <ul class="list-unstyled my-4">
-                                            <li class="align-items-center">
-                                                <b>500GB</b> <span>File Storage</span>
-                                            </li>
-                                            <li class="align-items-center my-2">
-                                                <b>Unlimited</b> <span>Users</span>
-                                            </li>
-                                            <li class="align-items-center">
-                                                <b>No time</b> <span>Tracking</span>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="card-footer bg-transparent position-relative">
-                                        <button class="btn btn-outline-white">Request a demo</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div><br /></div>
-    <div><br /></div>
-</section>
-<section id="pricingDiv" style="display: none;">
-    <div><br /></div>
-    <div class="page-header">
-        <div class="position-absolute fixed-top ms-auto w-50 h-100 rounded-3 z-index-0 d-none d-sm-none d-md-block me-n4" style="background-image: url(/img/PickleballBackground.png); background-size: cover;">
-        </div>
-        <div class="container py-5">
+<section class="py-3">
+    <div class="bg-gradient-dark position-relative m-3 border-radius-xl">
+        <img src="../../assets/img/shapes/waves-white.svg" alt="pattern-lines" class="position-absolute start-0 top-md-0 w-100 opacity-6">
+        <div class="container pb-lg-9 pb-7 pt-7 postion-relative z-index-2">
             <div class="row">
-                <div class="col-lg-7 d-flex justify-content-center flex-column">
-                    <div class="card card-body d-flex justify-content-center shadow-lg p-5 blur align-items-center">
-                        <h3 class="text-center">Cost Calculator</h3>
-                        <form role="form" id="contact-form" method="post" autocomplete="off">
-                            <div class="card-body">
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <label>Hours of Lesson Time</label>
-                                        <div class="input-group mb-4">
-                                            <input id="lessonHours" class="form-control" placeholder="Enter hours..." aria-label="First Name..." type="text">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 ps-2">
-                                        <label>Charge per Hour</label>
-                                        <div class="input-group">
-                                            <input id="chargeHourly"  type="number" class="form-control" placeholder="" aria-label="Last Name..." disabled>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="mb-4" >
-                                    <label>Total Cost</label>
-                                    <div class="input-group">
-                                        <input id="totalCost" type="text" class="form-control" placeholder="$0" disabled>
-                                    </div>
-                                </div>
-                                <div><br /></div>
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <button id= "btnSubmit" type="button" class="btn bg-gradient-dark w-100">Calculate Cost</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </form>
+                <div class="col-md-8 mx-auto text-center">
+                    <span class="badge bg-gradient-info mb-2">Pricing</span>
+                    <h3 class="text-white">See our pricing</h3>
+                    <p class="text-white">You have Free Unlimited Updates and Premium Support on each package.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="py-6 bg-gray-100">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 mb-lg-0 mb-4">
+                <div class="card">
+                    <div class="card-header p-0 mx-3 mt-3 position-relative z-index-1">
+                        <a href="javascript:;" class="d-block">
+                            <img src="/img/BaconsaleKateHorizontal.jpg" class="img-fluid border-radius-lg">
+                        </a>
+                    </div>
+                    <div class="card-body pt-3">
+                        <span class="text-gradient text-warning text-uppercase text-xs font-weight-bold my-2">House</span>
+                        <a href="javascript:;" class="card-title h5 d-block text-darker">
+                            Shared Coworking
+                        </a>
+                        <p class="card-description mb-4">
+                            Use border utilities to quickly style the border and border-radius of an element. Great for images, buttons.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-lg-0 mb-4">
+                <div class="card">
+                    <div class="card-header p-0 mx-3 mt-3 position-relative z-index-1">
+                        <a href="javascript:;" class="d-block">
+                            <img src="/img/BaconsaleKateHorizontal.jpg" class="img-fluid border-radius-lg">
+                        </a>
+                    </div>
+                    <div class="card-body pt-3">
+                        <span class="text-gradient text-info text-uppercase text-xs font-weight-bold my-2">Office</span>
+                        <a href="javascript:;" class="text-darker card-title h5 d-block">
+                            Really Housekeeping
+                        </a>
+                        <p class="card-description mb-4">
+                            Use border utilities to quickly style the border and border-radius of an element. Great for images, buttons.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-lg-0 mb-4">
+                <div class="card">
+                    <div class="card-header p-0 mx-3 mt-3 position-relative z-index-1">
+                        <a href="javascript:;" class="d-block">
+                            <img src="/img/BaconsaleKateHorizontal.jpg" class="img-fluid border-radius-lg">
+                        </a>
+                    </div>
+                    <div class="card-body pt-3">
+                        <span class="text-gradient text-warning text-uppercase text-xs font-weight-bold my-2">Hub</span>
+                        <a href="javascript:;" class="text-darker card-title h5 d-block">
+                            Shared Coworking
+                        </a>
+                        <p class="card-description mb-4">
+                            Use border utilities to quickly style the border and border-radius of an element. Great for images, buttons.
+                        </p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div><br /></div>
 </section>
 <script src="~/lib/jquery/dist/jquery.min.js"></script>
 <script src="~/lib/jquery/dist/jquery.js"></script>
