@@ -1,30 +1,97 @@
 ﻿@{
     ViewData["Title"] = "Schedule";
 }
-<!-- -------   START PRE-FOOTER 6 - title & description and input    -------- -->
-<div><br /></div>
-<div><br /></div>
-<div><br /></div>
-<div class="py-8">
-    <div class="container">
-        <div class="row">
-            <div class="mx-auto text-center">
-                <h3>Schedule Page is currently under maintenance</h3>
-                <p class="lead">Visit Home page for View #1 (hobby page) and Lessons for View #2 (calculator page) </p>
+@model Application
+
+<!-- The html below contains the forms for all of the survey and allows the  -->
+<body class="privacy">
+    <section class="pt-3 pt-md-5 pb-md-5 pt-lg-7 bg-gray-200">
+        <div class="container">
+            <div class="col-lg-8 col-md-10 mx-auto pb-5">
+                <div class="card shadow-lg">
+                    <div class="card-header bg-gradient-dark p-5 position-relative">
+                        <h3 class="text-white mb-0">Movie Collection Form</h3>
+                        <p class="text-white opacity-8 mb-4">Enter information to add to the movie collection</p>
+                        <div class="position-absolute w-100 z-index-1 bottom-0 ms-n5">
+                            <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 40" preserveAspectRatio="none" shape-rendering="auto" style="height:7vh;min-height:50px;">
+                                <defs>
+                                    <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"></path>
+                                </defs>
+                                <g class="moving-waves">
+                                    <use xlink:href="#gentle-wave" x="48" y="-1" fill="rgba(255,255,255,0.40"></use>
+                                    <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.35)"></use>
+                                    <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.25)"></use>
+                                    <use xlink:href="#gentle-wave" x="48" y="8" fill="rgba(255,255,255,0.20)"></use>
+                                    <use xlink:href="#gentle-wave" x="48" y="13" fill="rgba(255,255,255,0.15)"></use>
+                                    <use xlink:href="#gentle-wave" x="48" y="16" fill="rgba(255,255,255,0.95"></use>
+                                </g>
+                            </svg>
+                        </div>
+                    </div>
+                    <section>
+                        <div class="card card-plain">
+                            <form role="form" id="contact-form" action="/survey" method="POST" autocomplete="off">
+                                <div class="card-body pb-2">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="input-group mb-4">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 ps-md-2">
+                                            <div class="input-group">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group mb-0 mt-md-0 mt-4">
+                                        <div>
+                                            <label asp-for="movieTitle" style="font-size: 13px;">1. What is the title of the movie?</label>
+                                            <input asp-for="movieTitle" class="form-control" type="text" required>
+                                            <br>
+                                            <label asp-for="movieCategory" style="font-size: 13px;">2. What is the category?</label>
+                                            <input asp-for="movieCategory" class="form-control" type="text" required>
+                                            <br>
+                                            <label asp-for="movieYear" style="font-size: 13px;">3. When was the movie released?</label>
+                                            <input asp-for="movieYear" class="form-control" type="number" required>
+                                            <br>
+                                            <label asp-for="movieDirector" style="font-size: 13px;">4. Who was the director of the movie (Full Name)?</label>
+                                            <input asp-for="movieDirector" class="form-control" type="text" required>
+                                            <br>
+                                            <div>
+                                                <label asp-for="movieRating" style="font-size: 13px;">5. What is the Rating of the movie?</label><br>
+                                                <select asp-for="movieRating" class="form-control" required>
+                                                    <option value="" disabled selected>Please choose...</option>
+                                                    <option value="G">G</option>
+                                                    <option value="PG">PG</option>
+                                                    <option value="PG-13">PG-13</option>
+                                                    <option value="R">R</option>
+                                                </select>
+                                            </div>
+                                            <br>
+                                            <label asp-for="movieEdited" style="font-size: 13px;">6. Was the movie edited?</label><br>
+                                            <select asp-for="movieEdited" class="form-control">
+                                                <option value="true">No</option>
+                                                <option value="false">Yes</option>
+                                            </select>
+                                            <br>
+                                            <label asp-for="movieLent" style="font-size: 13px;">7. If applicable, what is the name of the person you lended the movie to?</label>
+                                            <input asp-for="movieLent" class="form-control" type="text">
+                                            <br>
+                                            <label asp-for="movieNotes" style="font-size: 13px;">8. Write other notes here</label>
+                                            <input asp-for="movieNotes" class="form-control" type="text" maxlength="25">
+                                            <br>
+                                        </div>
+                                        <div class="col-md-12 text-center">
+                                            <button type="submit" class="btn bg-gradient-dark mt-3 mb-0">Submit</button>
+                                            <br><br>
+                                        </div>
+                                    </div>
+                            </form>
+                        </div>
+                    </section>
+                </div>
             </div>
         </div>
-    </div>
-</div>
-<div><br /></div>
-<div><br /></div>
-<div><br /></div>
-<div><br /></div>
-<div><br /></div>
-<div><br /></div>
-<div><br /></div>
-<div><br /></div>
-<div><br /></div>
-<div><br /></div>
-<div><br /></div>
+    </section>
+</body>
 
 <!-- -------   END PRE-FOOTER 6 - title & description and input    -------- -->

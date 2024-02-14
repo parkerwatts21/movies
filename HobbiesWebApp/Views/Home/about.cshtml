@@ -1,75 +1,115 @@
 ﻿@{
     ViewData["Title"] = "Lessons";
 }
-<!-- START Pricing w/ 2 cards & nav tabs -->
-<section class="py-3">
-    <div class="bg-gradient-dark position-relative m-3 border-radius-xl">
-        <img src="../../assets/img/shapes/waves-white.svg" alt="pattern-lines" class="position-absolute start-0 top-md-0 w-100 opacity-6">
-        <div class="container pb-lg-9 pb-7 pt-7 postion-relative z-index-2">
-            <div class="row">
-                <div class="col-md-8 mx-auto text-center">
-                    <span class="badge bg-gradient-info mb-2">Pricing</span>
-                    <h3 class="text-white">See our pricing</h3>
-                    <p class="text-white">You have Free Unlimited Updates and Premium Support on each package.</p>
+<section class="position-relative">
+    <div class="page-header min-vh-50" style="background-image: url(/img/micbackground.jpg);">
+        <span class="mask bg-gradient-dark"></span>
+        <div class="container">
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-8 text-start">
+                    <h1 class="text-white text-center">Get to Know Joel</h1>
+                    <p class="lead text-white text-center">Learn about Joel's three main current hobbies and careers</p>
                 </div>
             </div>
         </div>
     </div>
+    <div class="position-absolute w-100 z-index-1 bottom-0">
+        <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+             viewBox="0 24 150 40" preserveAspectRatio="none" shape-rendering="auto">
+            <defs>
+                <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+            </defs>
+            <g class="moving-waves">
+                <use xlink:href="#gentle-wave" x="48" y="-1" fill="rgba(251,251,251,0.40" />
+                <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(251,251,251,0.35)" />
+                <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(251,251,251,0.25)" />
+                <use xlink:href="#gentle-wave" x="48" y="8" fill="rgba(251,251,251,0.20)" />
+                <use xlink:href="#gentle-wave" x="48" y="13" fill="rgba(251,251,251,0.15)" />
+                <use xlink:href="#gentle-wave" x="48" y="16" fill="rgba(251,251,251,0.95" />
+            </g>
+        </svg>
+    </div>
 </section>
+<!-- -------- END HEADER 2 w/ waves and typed text ------- -->
+<!-- Mandatory init script -->
+<script>
+    if (document.getElementById("typed")) {
+        var typed = new Typed("#typed", {
+            stringsElement: "#typed-strings",
+            typeSpeed: 70,
+            backSpeed: 50,
+            backDelay: 200,
+            startDelay: 500,
+            loop: true
+        });
+    }
+</script>
 <section class="py-6 bg-gray-100">
     <div class="container">
         <div class="row">
             <div class="col-lg-4 mb-lg-0 mb-4">
                 <div class="card">
                     <div class="card-header p-0 mx-3 mt-3 position-relative z-index-1">
-                        <a href="javascript:;" class="d-block">
-                            <img src="/img/BaconsaleKateHorizontal.jpg" class="img-fluid border-radius-lg">
+                        <a href="https://www.qwcomedy.com/" class="d-block">
+                            <img src="/img/QuickWits.png" class="img-fluid border-radius-lg">
                         </a>
                     </div>
                     <div class="card-body pt-3">
-                        <span class="text-gradient text-warning text-uppercase text-xs font-weight-bold my-2">House</span>
-                        <a href="javascript:;" class="card-title h5 d-block text-darker">
-                            Shared Coworking
+                        <span class="text-gradient text-warning text-uppercase text-xs font-weight-bold my-2">Comedian</span>
+                        <a href="https://www.qwcomedy.com/" class="card-title h5 d-block text-darker">
+                            Quick Wits Comedy
                         </a>
                         <p class="card-description mb-4">
-                            Use border utilities to quickly style the border and border-radius of an element. Great for images, buttons.
+                            Performing regularly as a quick-witted comedian, I entertain audiences with sharp humor and spontaneous wit.
                         </p>
+                        <a href="https://www.qwcomedy.com/" class="text-warning text-gradient icon-move-right">
+                            Learn more
+                            <i class="fas fa-arrow-right text-xs ms-1" aria-hidden="true"></i>
+                        </a>
                     </div>
                 </div>
             </div>
             <div class="col-lg-4 mb-lg-0 mb-4">
                 <div class="card">
                     <div class="card-header p-0 mx-3 mt-3 position-relative z-index-1">
-                        <a href="javascript:;" class="d-block">
+                        <a href="https://baconsale.com/" class="d-block">
                             <img src="/img/BaconsaleKateHorizontal.jpg" class="img-fluid border-radius-lg">
                         </a>
                     </div>
                     <div class="card-body pt-3">
-                        <span class="text-gradient text-info text-uppercase text-xs font-weight-bold my-2">Office</span>
-                        <a href="javascript:;" class="text-darker card-title h5 d-block">
-                            Really Housekeeping
+                        <span class="text-gradient text-info text-uppercase text-xs font-weight-bold my-2">Podcast Host</span>
+                        <a href="https://baconsale.com/" class="text-darker card-title h5 d-block">
+                            Baconsale
                         </a>
                         <p class="card-description mb-4">
-                            Use border utilities to quickly style the border and border-radius of an element. Great for images, buttons.
+                            As a Baconsale host, I explore films and pop culture, sharing lively discussions, witty banter, and insightful commentary.
                         </p>
+                        <a href="https://baconsale.com/" class="text-info icon-move-right">
+                            Learn more
+                            <i class="fas fa-arrow-right text-xs ms-1" aria-hidden="true"></i>
+                        </a>
                     </div>
                 </div>
             </div>
             <div class="col-lg-4 mb-lg-0 mb-4">
                 <div class="card">
                     <div class="card-header p-0 mx-3 mt-3 position-relative z-index-1">
-                        <a href="javascript:;" class="d-block">
-                            <img src="/img/BaconsaleKateHorizontal.jpg" class="img-fluid border-radius-lg">
+                        <a href="https://www.linkedin.com/in/joelhilton/" class="d-block">
+                            <img src="/img/CreditUnion.jpeg" class="img-fluid border-radius-lg">
                         </a>
                     </div>
                     <div class="card-body pt-3">
-                        <span class="text-gradient text-warning text-uppercase text-xs font-weight-bold my-2">Hub</span>
-                        <a href="javascript:;" class="text-darker card-title h5 d-block">
-                            Shared Coworking
+                        <span class="text-gradient text-warning text-uppercase text-xs font-weight-bold my-2">Copywriter</span>
+                        <a href="https://www.linkedin.com/in/joelhilton/" class="text-darker card-title h5 d-block">
+                            Digital Marketing
                         </a>
                         <p class="card-description mb-4">
-                            Use border utilities to quickly style the border and border-radius of an element. Great for images, buttons.
+                            At American First Credit Union, I create engaging content to drive growth and build relationships.
                         </p>
+                        <a href="https://www.linkedin.com/in/joelhilton/" class="text-warning text-gradient icon-move-right">
+                            Learn more
+                            <i class="fas fa-arrow-right text-xs ms-1" aria-hidden="true"></i>
+                        </a>
                     </div>
                 </div>
             </div>
