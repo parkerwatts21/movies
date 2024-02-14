@@ -1,8 +1,8 @@
-using HobbiesWebApp.Models;
+using Mission07_Watts.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
-namespace HobbiesWebApp.Controllers
+namespace Mission07_Watts.Controllers
 {
     public class HomeController : Controller
     {

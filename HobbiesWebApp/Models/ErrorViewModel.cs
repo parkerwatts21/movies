@@ -1,4 +1,4 @@
-namespace HobbiesWebApp.Models
+namespace Mission07_Watts.Models
 {
     public class ErrorViewModel
     {
