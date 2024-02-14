@@ -4,12 +4,19 @@ namespace Mission07_Watts.Models
 {
     public class Application
     {
+        [Key]
+        [Required]
         public int movieID  { get; set; }
-        public required string movieTitle { get; set; }
-        public required string movieCategory { get; set; }
-        public required int movieYear { get; set; }
-        public required string movieDirector { get; set; }
-        public required string movieRating { get; set; }
+        [Required]
+        public string movieTitle { get; set; }
+        [Required]
+        public string movieCategory { get; set; }
+        [Required]
+        public int movieYear { get; set; }
+        [Required]
+        public string movieDirector { get; set; }
+        [Required]
+        public string movieRating { get; set; }
         public bool movieEdited { get; set; }
         public string movieLent{ get; set; }
 

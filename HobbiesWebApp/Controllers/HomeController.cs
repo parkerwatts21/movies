@@ -25,7 +25,7 @@ namespace Mission07_Watts.Controllers
         [HttpPost]
         public IActionResult Form(Application response)
         {
-            return View("Form");
+            return View("completion");
         }
 
 
