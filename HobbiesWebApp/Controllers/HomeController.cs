@@ -6,18 +6,23 @@ namespace Mission07_Watts.Controllers
 {
     public class HomeController : Controller
     {
-        public IActionResult Index() //View #1 Hobbies
+        private MovieApplicationContext _context;
+        public HomeController(MovieApplicationContext temp) //Constructor
+        {
+            _context = temp;
+        }
+        public IActionResult Index() //View #1 Main Mage
         {
             return View();
         }
 
-        public IActionResult About() //View #2 Calculation part of the assignment
+        public IActionResult About() //View #2 About Joel Hilton part of the assignment
         {
             return View();
         }
 
         [HttpGet]
-        public IActionResult Form()
+        public IActionResult Form() //View #3 From part of the assignment
         {
             return View();
         }
@@ -25,6 +30,8 @@ namespace Mission07_Watts.Controllers
         [HttpPost]
         public IActionResult Form(Application response)
         {
+            _context.Applications.Add(response); //Add record to the database
+            _context.SaveChanges();
             return View("completion");
         }
 
