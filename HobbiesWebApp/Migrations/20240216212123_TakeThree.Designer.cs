@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Mission07_Watts.Models;
 
@@ -10,9 +11,11 @@ using Mission07_Watts.Models;
 namespace Mission07_Watts.Migrations
 {
     [DbContext(typeof(MovieApplicationContext))]
-    partial class MovieApplicationContextModelSnapshot : ModelSnapshot
+    [Migration("20240216212123_TakeThree")]
+    partial class TakeThree
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "8.0.2");
