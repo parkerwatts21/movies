@@ -13,6 +13,7 @@ namespace Mission07_Watts.Models
         public string movieCategoryOne { get; set; }
         public string movieCategoryTwo { get; set; } = "";
         [Required]
+        [Range(1800, 2050)]
         public int movieYear { get; set; }
         [Required]
         public string movieDirector { get; set; }
