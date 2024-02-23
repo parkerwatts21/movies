@@ -44,6 +44,8 @@
                                     </div>
                                     <div class="form-group mb-0 mt-md-0 mt-4">
                                         <div>
+                                            <input type="hidden" asp-for="movieID" />
+
                                             <label asp-for="movieTitle" style="font-size: 13px;">1. What is the title of the movie?</label>
                                             <input asp-for="movieTitle" class="form-control" placeholder="i.e. Starwars">
                                             <br>
@@ -87,6 +89,7 @@
                                             <button type="submit" class="btn bg-gradient-dark mt-3 mb-0">Submit</button>
                                             <br><br>
                                         </div>
+                                        <div asp-validation-summary="All"></div>
                                     </div>
                                 </div>
                             </form>
