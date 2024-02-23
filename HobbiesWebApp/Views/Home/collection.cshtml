@@ -4,7 +4,7 @@
 @{
 }
 
-@model List<Application>
+@model List<Movie>
 
 <section class="pt-3 pt-md-5 pb-md-5 pt-lg-7 bg-gray-200">
     <h1 class="justify-content-center text-center" style="margin-bottom: 50px; margin-top: 25px;">Joel's Movie Collection</h1>
@@ -18,14 +18,13 @@
                             <thead class="fw-bold">
                                 <tr>
                                     <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Movie Title</th>
-                                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Category One</th>
-                                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Category Two</th>
+                                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Category Id</th>
                                     <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Year</th>
                                     <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Director</th>
                                     <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Rating</th>
                                     <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Edited</th>
                                     <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Lent</th>
-                                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Edited</th>
+                                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">CopiedToPlex</th>
                                     <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Notes</th>
                                     <th></th>
                                     <th></th>
@@ -36,18 +35,17 @@
                             {
                                 <tbody>
                                     <tr>
-                                        <td class="align-middle text-center text-sm"><p class="text-xs font-weight-bold mb-0">@x.movieTitle</p></td>
-                                        <td class="align-middle text-center text-sm"><p class="text-xs font-weight-bold mb-0">@x.movieCategoryOne</p></td>
-                                        <td class="align-middle text-center text-sm"><p class="text-xs font-weight-bold mb-0">@x.movieCategoryTwo</p></td>
-                                        <td class="align-middle text-center text-sm"><p class="text-xs font-weight-bold mb-0">@x.movieYear</p></td>
-                                        <td class="align-middle text-center text-sm"><p class="text-xs font-weight-bold mb-0">@x.movieDirector</p></td>
-                                        <td class="align-middle text-center text-sm"><p class="text-xs font-weight-bold mb-0">@x.movieRating</p></td>
-                                        <td class="align-middle text-center text-sm"><p class="text-xs font-weight-bold mb-0">@x.movieEdited</p></td>
-                                        <td class="align-middle text-center text-sm"><p class="text-xs font-weight-bold mb-0">@x.movieLent</p></td>
-                                        <td class="align-middle text-center text-sm"><p class="text-xs font-weight-bold mb-0">@x.movieEdited</p></td>
-                                        <td class="align-middle text-center text-sm"><p class="text-xs font-weight-bold mb-0">@x.movieNotes</p></td>
-                                        <td class="align-middle text-center text-sm"><a class="btn bg-gradient-info" asp-controller="Home" asp-action="Edit" asp-route-id="@x.movieID">Edit</a></td>
-                                        <td class="align-middle text-center text-sm"><a class="btn btn-danger" asp-controller="Home" asp-action="Delete" asp-route-id="@x.movieID">Delete</a></td>
+                                        <td class="align-middle text-center text-sm"><p class="text-xs font-weight-bold mb-0">@x.Title</p></td>
+                                        <td class="align-middle text-center text-sm"><p class="text-xs font-weight-bold mb-0">@x.CategoryId</p></td>
+                                        <td class="align-middle text-center text-sm"><p class="text-xs font-weight-bold mb-0">@x.Year</p></td>
+                                        <td class="align-middle text-center text-sm"><p class="text-xs font-weight-bold mb-0">@x.Director</p></td>
+                                        <td class="align-middle text-center text-sm"><p class="text-xs font-weight-bold mb-0">@x.Rating</p></td>
+                                        <td class="align-middle text-center text-sm"><p class="text-xs font-weight-bold mb-0">@x.Edited</p></td>
+                                        <td class="align-middle text-center text-sm"><p class="text-xs font-weight-bold mb-0">@x.LentTo</p></td>
+                                        <td class="align-middle text-center text-sm"><p class="text-xs font-weight-bold mb-0">@x.CopiedToPlex</p></td>
+                                        <td class="align-middle text-center text-sm"><p class="text-xs font-weight-bold mb-0">@x.Notes</p></td>
+                                        <td class="align-middle text-center text-sm"><a class="btn bg-gradient-info" asp-controller="Home" asp-action="Edit" asp-route-id="@x.MovieId">Edit</a></td>
+                                        <td class="align-middle text-center text-sm"><a class="btn btn-danger" asp-controller="Home" asp-action="Delete" asp-route-id="@x.MovieId">Delete</a></td>
                                     </tr>
                                 </tbody>
                             }

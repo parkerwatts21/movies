@@ -1,7 +1,7 @@
 ﻿@{
     ViewData["Title"] = "Form";
 }
-@model Application
+@model Movie
 
 <!-- The html below contains the forms for all of the survey and allows the  -->
 <body class="privacy">
@@ -44,26 +44,27 @@
                                     </div>
                                     <div class="form-group mb-0 mt-md-0 mt-4">
                                         <div>
-                                            <input type="hidden" asp-for="movieID" />
+                                            <input type="hidden" asp-for="MovieId" />
 
-                                            <label asp-for="movieTitle" style="font-size: 13px;">1. What is the title of the movie?</label>
-                                            <input asp-for="movieTitle" class="form-control" placeholder="i.e. Starwars">
+                                            <label asp-for="Title" style="font-size: 13px;">1. What is the title of the movie?</label>
+                                            <input asp-for="Title" class="form-control" placeholder="i.e. Starwars">
                                             <br>
-                                            <label asp-for="movieCategoryOne" style="font-size: 13px;">2a. What is the main category for this movie?</label>
-                                            <input asp-for="movieCategoryOne" class="form-control" placeholder="i.e. Action">
+                                            <label asp-for="CategoryId" style="font-size: 13px;">2a. What is the main category for this movie?</label>
+                                            <option value="">Select a Category</option>
+                                                @foreach (Category c in ViewBag.Categories)
+                                                {
+                                                    <option value="@c.CategoryId">@c.CategoryName</option>
+                                                }
+                                            <br>                                        
+                                            <label asp-for="Year" style="font-size: 13px;">3. When was the movie released?</label>
+                                            <input asp-for="Year" class="form-control" placeholder="i.e. 2007">
                                             <br>
-                                            <label asp-for="movieCategoryTwo" style="font-size: 13px;">2b. If applicable, what is the secondary category for this movie?</label>
-                                            <input asp-for="movieCategoryTwo" class="form-control" placeholder="i.e. Thriller">
-                                            <br>
-                                            <label asp-for="movieYear" style="font-size: 13px;">3. When was the movie released?</label>
-                                            <input asp-for="movieYear" class="form-control" placeholder="i.e. 2007">
-                                            <br>
-                                            <label asp-for="movieDirector" style="font-size: 13px;">4. Who was the director of the movie (Full Name)?</label>
-                                            <input asp-for="movieDirector" class="form-control" placeholder="i.e. Steven Spielberg">
+                                            <label asp-for="Director" style="font-size: 13px;">4. Who was the director of the movie (Full Name)?</label>
+                                            <input asp-for="Director" class="form-control" placeholder="i.e. Steven Spielberg">
                                             <br>
                                             <div>
-                                                <label asp-for="movieRating" style="font-size: 13px;">5. What is the Rating of the movie?</label><br>
-                                                <select asp-for="movieRating" class="form-control">
+                                                <label asp-for="Rating" style="font-size: 13px;">5. What is the Rating of the movie?</label><br>
+                                                <select asp-for="Rating" class="form-control">
                                                     <option value="" disabled selected>Please choose...</option>
                                                     <option value="G">G</option>
                                                     <option value="PG">PG</option>
@@ -72,17 +73,23 @@
                                                 </select>
                                             </div>
                                             <br>
-                                            <label asp-for="movieEdited" style="font-size: 13px;">6. Was the movie edited?</label><br>
-                                            <select asp-for="movieEdited" class="form-control">
-                                                <option value="false">No</option>
-                                                <option value="true">Yes</option>
+                                            <label asp-for="Edited" style="font-size: 13px;">6. Was the movie edited?</label><br>
+                                            <select asp-for="Edited" class="form-control">
+                                                <option value="0">No</option>
+                                                <option value="1">Yes</option>
                                             </select>
                                             <br>
-                                            <label asp-for="movieLent" style="font-size: 13px;">7. If applicable, what is the name of the person you lended the movie to?</label>
-                                            <input asp-for="movieLent" class="form-control" placeholder="i.e. John Doe">
+                                            <label asp-for="LentTo" style="font-size: 13px;">7. If applicable, what is the name of the person you lended the movie to?</label>
+                                            <input asp-for="LentTo" class="form-control" placeholder="i.e. John Doe">
                                             <br>
-                                            <label asp-for="movieNotes" style="font-size: 13px;">8. Write other notes here</label>
-                                            <input asp-for="movieNotes" class="form-control" placeholder="i.e. Blu-ray">
+                                            <label asp-for="CopiedToPlex" style="font-size: 13px;">8. Was the copied to plex?</label><br>
+                                            <select asp-for="CopiedToPlex" class="form-control">
+                                                <option value="0">No</option>
+                                                <option value="1">Yes</option>
+                                            </select>
+                                            <br />
+                                            <label asp-for="Notes" style="font-size: 13px;">9. Write other notes here</label>
+                                            <input asp-for="Notes" class="form-control" placeholder="i.e. Blu-ray">
                                             <br>
                                         </div>
                                         <div class="col-md-12 text-center">

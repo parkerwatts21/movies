@@ -24,19 +24,25 @@ namespace Mission07_Watts.Controllers
         [HttpGet]
         public IActionResult Form() //View #3 From part of the assignment
         {
-            return View(new Application());
+            ViewBag.Categories = _context.Categories
+                .OrderBy(x => x.CategoryName)
+                .ToList();
+            return View(new Movie());
         }
 
         [HttpPost]
-        public IActionResult Form(Application response)
+        public IActionResult Form(Movie response)
         {
             if (ModelState.IsValid)
             {
-                _context.Applications.Add(response); //Add record to the database
+                _context.Movies.Add(response); //Add record to the database
                 _context.SaveChanges();
             }
             else //Invalid data
             {
+                ViewBag.Categories = _context.Categories
+                    .OrderBy(x => x.CategoryName)
+                    .ToList();
                 return View(response);
             }
 
@@ -46,8 +52,8 @@ namespace Mission07_Watts.Controllers
         public IActionResult Collection()
         {
             //linq
-            var applications = _context.Applications
-                .OrderBy(x => x.movieTitle).ToList();
+            var applications = _context.Movies
+                .OrderBy(x => x.Title).ToList();
 
             return View(applications);
         }
@@ -55,15 +61,18 @@ namespace Mission07_Watts.Controllers
         [HttpGet]
         public IActionResult Edit(int id)
         {
+            ViewBag.Categories = _context.Categories
+                .OrderBy(x => x.CategoryName)
+                .ToList();
 
-            var recordToEdit = _context.Applications
-                .Single(x => x.movieID == id);
+            var recordToEdit = _context.Movies
+                .Single(x => x.MovieId == id);
 
             return View("form", recordToEdit);
         }
 
         [HttpPost]
-        public IActionResult Edit(Application updatedInfo)
+        public IActionResult Edit(Movie updatedInfo)
         {
             _context.Update(updatedInfo);
             _context.SaveChanges();
@@ -74,16 +83,16 @@ namespace Mission07_Watts.Controllers
         [HttpGet]
         public IActionResult Delete(int id)
         {
-            var recordToDelete = _context.Applications
-                .Single(x => x.movieID == id);
+            var recordToDelete = _context.Movies
+                .Single(x => x.MovieId == id);
 
             return View(recordToDelete);
         }
 
         [HttpPost]
-        public IActionResult Delete(Application application)
+        public IActionResult Delete(Movie application)
         {
-            _context.Applications.Remove(application);
+            _context.Movies.Remove(application);
             _context.SaveChanges();
 
             return RedirectToAction("collection");
