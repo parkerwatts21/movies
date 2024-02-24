@@ -6,13 +6,16 @@
 <!-- The html below contains the forms for all of the survey and allows the  -->
 <body class="privacy">
     <section class="pt-3 pt-md-5 pb-md-5 pt-lg-7 bg-gray-200 justify-content-center test-center">
-        <h1 class="justify-content-center text-center" style="margin-bottom: 400px; margin-top:100px;">Confirm Deletion!</h1>
-        <form method="post">
-            <input type="hidden" asp-for="MovieId" />
+        <div style="margin-bottom:320px">
+            <h1 class="justify-content-center text-center" style="margin-top:100px;">Confirm Deletion!</h1>
+            <form method="post">
+                <input type="hidden" asp-for="MovieId" />
 
-            <button type="submit">Delete</button>
-            <a class="btn btn-info" asp-controller="Home" asp-action="collection">Cancel</a>
-
-        </form>
+                <div class="justify-content-center text-center">
+                    <button class="btn bg-gradient-danger" type="submit">Delete</button>
+                    <a asp-action="collection"><button type="button" class="btn bg-gradient-dark mt-4">Cancel</button></a>
+                </div>
+            </form>
+        </div>
     </section>
 </body>

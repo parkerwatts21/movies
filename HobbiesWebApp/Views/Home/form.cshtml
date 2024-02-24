@@ -49,12 +49,15 @@
                                             <label asp-for="Title" style="font-size: 13px;">1. What is the title of the movie?</label>
                                             <input asp-for="Title" class="form-control" placeholder="i.e. Starwars">
                                             <br>
-                                            <label asp-for="CategoryId" style="font-size: 13px;">2a. What is the main category for this movie?</label>
-                                            <option value="">Select a Category</option>
+                                            <label asp-for="CategoryId" style="font-size: 13px;">2 What is the main category for this movie?</label>
+                                            <br>
+                                            <select asp-for="CategoryId" class="form-control" style="font-size: 13px;">
+                                                <option value="">Select a Category</option>
                                                 @foreach (Category c in ViewBag.Categories)
                                                 {
                                                     <option value="@c.CategoryId">@c.CategoryName</option>
                                                 }
+                                            </select>
                                             <br>                                        
                                             <label asp-for="Year" style="font-size: 13px;">3. When was the movie released?</label>
                                             <input asp-for="Year" class="form-control" placeholder="i.e. 2007">

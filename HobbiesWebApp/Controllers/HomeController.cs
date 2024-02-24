@@ -1,5 +1,6 @@
 using Mission07_Watts.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System.Diagnostics;
 
 namespace Mission07_Watts.Controllers

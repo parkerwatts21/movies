@@ -6,9 +6,7 @@ namespace Mission07_Watts.Models
     {
         public MovieApplicationContext(DbContextOptions<MovieApplicationContext> options) : base(options) //Constructor
         {
-
         }
-
         public DbSet<Movie> Movies { get; set; }
         public DbSet<Category> Categories { get; set; }
 
@@ -27,5 +25,6 @@ namespace Mission07_Watts.Models
 
                 );
         }
+
     }
 }
