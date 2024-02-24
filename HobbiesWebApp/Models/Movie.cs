@@ -17,7 +17,7 @@ namespace Mission07_Watts.Models
         public string Title { get; set; } //Required
 
         [Required(ErrorMessage = "Sorry, you need to enter in a movie year")]
-        [Range(1888, 2050, ErrorMessage = "Sorry, you need to enter a number between 1800 and 2050")]
+        [Range(1888, 2050, ErrorMessage = "Sorry, you need to enter a number between 1888 and 2050")]
         public int Year { get; set; } //Required
         public string? Director { get; set; }
         public string? Rating { get; set; }
