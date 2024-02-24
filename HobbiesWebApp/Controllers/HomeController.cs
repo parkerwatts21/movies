@@ -50,7 +50,7 @@ namespace Mission07_Watts.Controllers
             return View("completion", response);
         }
 
-        public IActionResult Collection()
+        public IActionResult Collection()  //Database colection view
         {
             //linq
             var applications = _context.Movies
@@ -60,7 +60,7 @@ namespace Mission07_Watts.Controllers
         }
 
         [HttpGet]
-        public IActionResult Edit(int id)
+        public IActionResult Edit(int id) //Edit view
         {
             ViewBag.Categories = _context.Categories
                 .OrderBy(x => x.CategoryName)
@@ -73,7 +73,7 @@ namespace Mission07_Watts.Controllers
         }
 
         [HttpPost]
-        public IActionResult Edit(Movie updatedInfo)
+        public IActionResult Edit(Movie updatedInfo) //Confirm Update changes
         {
             _context.Update(updatedInfo);
             _context.SaveChanges();
@@ -82,7 +82,7 @@ namespace Mission07_Watts.Controllers
         }
 
         [HttpGet]
-        public IActionResult Delete(int id)
+        public IActionResult Delete(int id) //Send to delete age
         {
             var recordToDelete = _context.Movies
                 .Single(x => x.MovieId == id);
@@ -91,7 +91,7 @@ namespace Mission07_Watts.Controllers
         }
 
         [HttpPost]
-        public IActionResult Delete(Movie application)
+        public IActionResult Delete(Movie application) //Confirm deletion
         {
             _context.Movies.Remove(application);
             _context.SaveChanges();
