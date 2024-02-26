@@ -18,7 +18,7 @@
                             <thead class="fw-bold">
                                 <tr>
                                     <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Movie Title</th>
-                                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Category Id</th>
+                                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Category</th>
                                     <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Year</th>
                                     <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Director</th>
                                     <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Rating</th>
@@ -36,7 +36,7 @@
                                 <tbody>
                                     <tr>
                                         <td class="align-middle text-center text-sm"><p class="text-xs font-weight-bold mb-0">@x.Title</p></td>
-                                        <td class="align-middle text-center text-sm"><p class="text-xs font-weight-bold mb-0">@x.CategoryId</p></td>
+                                        <td class="align-middle text-center text-sm"><p class="text-xs font-weight-bold mb-0">@x.Category?.CategoryName</p></td>
                                         <td class="align-middle text-center text-sm"><p class="text-xs font-weight-bold mb-0">@x.Year</p></td>
                                         <td class="align-middle text-center text-sm"><p class="text-xs font-weight-bold mb-0">@x.Director</p></td>
                                         <td class="align-middle text-center text-sm"><p class="text-xs font-weight-bold mb-0">@x.Rating</p></td>

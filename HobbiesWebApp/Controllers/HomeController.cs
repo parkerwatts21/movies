@@ -54,7 +54,9 @@ namespace Mission07_Watts.Controllers
         {
             //linq
             var applications = _context.Movies
-                .OrderBy(x => x.Title).ToList();
+                .Include("Category")
+                .OrderBy(x => x.Title)
+                .ToList();
 
             return View(applications);
         }
